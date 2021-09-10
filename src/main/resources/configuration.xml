@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+    <import resource="classpath:de/dailab/jiactng/agentcore/conf/AgentNode.xml" />
+    <import resource="classpath:de/dailab/jiactng/agentcore/conf/Agent.xml" />
+    <import resource="classpath:de/dailab/jiactng/agentcore/conf/JMSMessaging.xml" />
+
+    <bean name="StartNode" parent="NodeWithJMX">
+        <property name="agents">
+            <list>
+                <ref bean="Agent11"/>
+                <ref bean="Agent1"/>
+                <ref bean="Agent2"/>
+                <ref bean="Agent3"/>
+                <ref bean="Agent4"/>
+                <ref bean="Agent5"/>
+                <ref bean="Agent6"/>
+                <ref bean="Agent7"/>
+                <ref bean="Agent8"/>
+                <ref bean="Agent9"/>
+                <ref bean="Agent10"/>
+                <ref bean="Agent13"/>
+                <ref bean="Agent14"/>
+                <ref bean="Agent15"/>
+                <ref bean="Agent16"/>
+                <ref bean="Agent17"/>
+                <ref bean="Agent18"/>
+                <ref bean="Agent19"/>
+                <ref bean="Agent20"/>
+                <ref bean="Agent21"/>
+                <ref bean="Agent22"/>
+                <ref bean="Agent12"/>
+
+
+
+            </list>
+        </property>
+    </bean>
+    <bean id="Agent0" parent="SimpleAgent" singleton="true">
+        <property name="agentBeans">
+            <list>
+                <ref bean="WriterBean" />
+            </list>
+        </property>
+    </bean>
+    <bean id="Agent11" parent="SimpleAgent" singleton="true">
+        <property name="agentBeans">
+            <list>
+                <ref bean="Agent11Bean" />
+            </list>
+        </property>
+    </bean>
+    <bean id="Agent11Bean" class="massim.demoAgents.Agent11Bean" singleton="true">
+
+        <property name="executionInterval" value="6" />
+        <property name="logLevel" value="INFO" />
+        <property name="A1">
+            <ref bean="Agent1Bean"></ref>
+        </property>
+        <property name="A2">
+            <ref bean="Agent2Bean"></ref>
+        </property>
+        <property name="A3">
+            <ref bean="Agent3Bean"></ref>
+        </property>
+        <property name="A4">
+            <ref bean="Agent4Bean"></ref>
+        </property>
+        <property name="A5">
+            <ref bean="Agent5Bean"></ref>
+        </property>
+        <property name="A6">
+            <ref bean="Agent6Bean"></ref>
+        </property>
+        <property name="A7">
+            <ref bean="Agent7Bean"></ref>
+        </property>
+        <property name="A8">
+            <ref bean="Agent8Bean"></ref>
+        </property>
+        <property name="A9">
+            <ref bean="Agent9Bean"></ref>
+        </property>
+        <property name="A10">
+            <ref bean="Agent10Bean"></ref>
+        </property>
+        <property name="A12">
+            <ref bean="Agent12Bean"></ref>
+        </property>
+        <property name="A13">
+            <ref bean="Agent13Bean"></ref>
+        </property>
+        <property name="A14">
+            <ref bean="Agent14Bean"></ref>
+        </property>
+        <property name="A15">
+            <ref bean="Agent15Bean"></ref>
+        </property>
+        <property name="A16">
+            <ref bean="Agent16Bean"></ref>
+        </property>
+        <property name="A17">
+            <ref bean="Agent17Bean"></ref>
+        </property>
+        <property name="A18">
+            <ref bean="Agent18Bean"></ref>
+        </property>
+        <property name="A19">
+            <ref bean="Agent19Bean"></ref>
+        </property>
+        <property name="A20">
+            <ref bean="Agent20Bean"></ref>
+        </property>
+        <property name="A21">
+            <ref bean="Agent21Bean"></ref>
+        </property>
+        <property name="A22">
+            <ref bean="Agent22Bean"></ref>
+        </property>
+    </bean>
+    <bean id="WriterBean" class="massim.demoAgents.WriterBean" singleton="true">
+
+        <property name="executionInterval" value="6" />
+        <property name="logLevel" value="INFO" />
+        <property name="A1">
+            <ref bean="Agent1Bean"></ref>
+        </property>
+        <property name="A2">
+            <ref bean="Agent2Bean"></ref>
+        </property>
+        <property name="A3">
+            <ref bean="Agent3Bean"></ref>
+        </property>
+        <property name="A4">
+            <ref bean="Agent4Bean"></ref>
+        </property>
+        <property name="A5">
+            <ref bean="Agent5Bean"></ref>
+        </property>
+        <property name="A6">
+            <ref bean="Agent6Bean"></ref>
+        </property>
+        <property name="A7">
+            <ref bean="Agent7Bean"></ref>
+        </property>
+        <property name="A8">
+            <ref bean="Agent8Bean"></ref>
+        </property>
+        <property name="A9">
+            <ref bean="Agent9Bean"></ref>
+        </property>
+        <property name="A10">
+            <ref bean="Agent10Bean"></ref>
+        </property>
+    </bean>
+    <bean id="Agent12Bean" class="massim.demoAgents.Agent12Bean" singleton="true">
+
+        <property name="executionInterval" value="6" />
+        <property name="logLevel" value="INFO" />
+        <property name="A1">
+            <ref bean="Agent1Bean"></ref>
+        </property>
+        <property name="A2">
+            <ref bean="Agent2Bean"></ref>
+        </property>
+        <property name="A3">
+            <ref bean="Agent3Bean"></ref>
+        </property>
+        <property name="A4">
+            <ref bean="Agent4Bean"></ref>
+        </property>
+        <property name="A5">
+            <ref bean="Agent5Bean"></ref>
+        </property>
+        <property name="A6">
+            <ref bean="Agent6Bean"></ref>
+        </property>
+        <property name="A7">
+            <ref bean="Agent7Bean"></ref>
+        </property>
+        <property name="A8">
+            <ref bean="Agent8Bean"></ref>
+        </property>
+        <property name="A9">
+            <ref bean="Agent9Bean"></ref>
+        </property>
+        <property name="A10">
+            <ref bean="Agent10Bean"></ref>
+        </property>
+    </bean>
+    <bean id="Agent1" parent="SimpleAgent" singleton="true">
+        <property name="agentBeans">
+            <list>
+                <ref bean="Agent1Bean" />
+            </list>
+        </property>
+    </bean>
+    <bean id="Agent2" parent="SimpleAgent" singleton="true">
+        <property name="agentBeans">
+            <list>
+                <ref bean="Agent2Bean" />
+            </list>
+        </property>
+    </bean>
+    <bean id="Agent3" parent="SimpleAgent" singleton="true">
+        <property name="agentBeans">
+            <list>
+                <ref bean="Agent3Bean" />
+            </list>
+        </property>
+    </bean>
+    <bean id="Agent4" parent="SimpleAgent" singleton="true">
+        <property name="agentBeans">
+            <list>
+                <ref bean="Agent4Bean" />
+            </list>
+        </property>
+    </bean>
+    <bean id="Agent5" parent="SimpleAgent" singleton="true">
+        <property name="agentBeans">
+            <list>
+                <ref bean="Agent5Bean" />
+            </list>
+        </property>
+    </bean>
+    <bean id="Agent6" parent="SimpleAgent" singleton="true">
+        <property name="agentBeans">
+            <list>
+                <ref bean="Agent6Bean" />
+            </list>
+        </property>
+    </bean>
+    <bean id="Agent7" parent="SimpleAgent" singleton="true">
+        <property name="agentBeans">
+            <list>
+                <ref bean="Agent7Bean" />
+            </list>
+        </property>
+    </bean>
+    <bean id="Agent8" parent="SimpleAgent" singleton="true">
+        <property name="agentBeans">
+            <list>
+                <ref bean="Agent8Bean" />
+            </list>
+        </property>
+    </bean>
+    <bean id="Agent9" parent="SimpleAgent" singleton="true">
+        <property name="agentBeans">
+            <list>
+                <ref bean="Agent9Bean" />
+            </list>
+        </property>
+    </bean>
+    <bean id="Agent10" parent="SimpleAgent" singleton="true">
+        <property name="agentBeans">
+            <list>
+                <ref bean="Agent10Bean" />
+            </list>
+        </property>
+    </bean>
+    <bean id="Agent12" parent="SimpleAgent" singleton="true">
+        <property name="agentBeans">
+            <list>
+                <ref bean="Agent12Bean" />
+            </list>
+        </property>
+    </bean>
+
+    <bean id="Agent13" parent="SimpleAgent" singleton="true">
+        <property name="agentBeans">
+            <list>
+                <ref bean="Agent13Bean" />
+            </list>
+        </property>
+    </bean>
+    <bean id="Agent14" parent="SimpleAgent" singleton="true">
+        <property name="agentBeans">
+            <list>
+                <ref bean="Agent14Bean" />
+            </list>
+        </property>
+    </bean>
+    <bean id="Agent15" parent="SimpleAgent" singleton="true">
+        <property name="agentBeans">
+            <list>
+                <ref bean="Agent15Bean" />
+            </list>
+        </property>
+    </bean>
+    <bean id="Agent16" parent="SimpleAgent" singleton="true">
+        <property name="agentBeans">
+            <list>
+                <ref bean="Agent16Bean" />
+            </list>
+        </property>
+    </bean>
+    <bean id="Agent17" parent="SimpleAgent" singleton="true">
+        <property name="agentBeans">
+            <list>
+                <ref bean="Agent17Bean" />
+            </list>
+        </property>
+    </bean>
+    <bean id="Agent18" parent="SimpleAgent" singleton="true">
+        <property name="agentBeans">
+            <list>
+                <ref bean="Agent18Bean" />
+            </list>
+        </property>
+    </bean>
+    <bean id="Agent19" parent="SimpleAgent" singleton="true">
+        <property name="agentBeans">
+            <list>
+                <ref bean="Agent19Bean" />
+            </list>
+        </property>
+    </bean>
+    <bean id="Agent20" parent="SimpleAgent" singleton="true">
+        <property name="agentBeans">
+            <list>
+                <ref bean="Agent20Bean" />
+            </list>
+        </property>
+    </bean>
+    <bean id="Agent21" parent="SimpleAgent" singleton="true">
+        <property name="agentBeans">
+            <list>
+                <ref bean="Agent21Bean" />
+            </list>
+        </property>
+    </bean>
+    <bean id="Agent22" parent="SimpleAgent" singleton="true">
+        <property name="agentBeans">
+            <list>
+                <ref bean="Agent22Bean" />
+            </list>
+        </property>
+    </bean>
+    <bean id="Agent1Bean" class="massim.demoAgents.Agent1Bean" singleton="true">
+        <property name="executionInterval" value="1000" />
+        <property name="logLevel" value="INFO" />
+        <property name="username" value="1"/>
+        <property name="password" value="1"/>
+        <property name="port" value="12300"/>
+        <property name="host" value="localhost"/>
+        <property name="Agent2">
+            <ref bean="Agent2Bean"></ref>
+        </property>
+        <property name="Agent3">
+            <ref bean="Agent3Bean"></ref>
+        </property>
+        <property name="Agent4">
+            <ref bean="Agent4Bean"></ref>
+        </property>
+        <property name="Agent5">
+            <ref bean="Agent5Bean"></ref>
+        </property>
+        <property name="Agent6">
+            <ref bean="Agent6Bean"></ref>
+        </property>
+        <property name="Agent7">
+            <ref bean="Agent7Bean"></ref>
+        </property>
+        <property name="Agent8">
+            <ref bean="Agent8Bean"></ref>
+        </property>
+        <property name="Agent9">
+            <ref bean="Agent9Bean"></ref>
+        </property>
+        <property name="Agent10">
+            <ref bean="Agent10Bean"></ref>
+        </property>
+    </bean>
+    <bean id="Agent2Bean" class="massim.demoAgents.Agent2Bean" singleton="true">
+        <property name="executionInterval" value="1000" />
+        <property name="logLevel" value="INFO" />
+        <property name="username" value="2"/>
+        <property name="password" value="1"/>
+        <property name="port" value="12300"/>
+        <property name="host" value="localhost"/>
+        <property name="Agent1">
+            <ref bean="Agent1Bean"></ref>
+        </property>
+        <property name="Agent3">
+            <ref bean="Agent3Bean"></ref>
+        </property>
+        <property name="Agent4">
+            <ref bean="Agent4Bean"></ref>
+        </property>
+        <property name="Agent5">
+            <ref bean="Agent5Bean"></ref>
+        </property>
+        <property name="Agent6">
+            <ref bean="Agent6Bean"></ref>
+        </property>
+        <property name="Agent7">
+            <ref bean="Agent7Bean"></ref>
+        </property>
+        <property name="Agent8">
+            <ref bean="Agent8Bean"></ref>
+        </property>
+        <property name="Agent9">
+            <ref bean="Agent9Bean"></ref>
+        </property>
+        <property name="Agent10">
+            <ref bean="Agent10Bean"></ref>
+        </property>
+    </bean>
+    <bean id="Agent3Bean" class="massim.demoAgents.Agent3Bean" singleton="true">
+        <property name="executionInterval" value="1000" />
+        <property name="logLevel" value="INFO" />
+        <property name="username" value="3"/>
+        <property name="password" value="1"/>
+        <property name="port" value="12300"/>
+        <property name="host" value="localhost"/>
+        <property name="Agent1">
+            <ref bean="Agent1Bean"></ref>
+        </property>
+        <property name="Agent2">
+            <ref bean="Agent2Bean"></ref>
+        </property>
+        <property name="Agent4">
+            <ref bean="Agent4Bean"></ref>
+        </property>
+        <property name="Agent5">
+            <ref bean="Agent5Bean"></ref>
+        </property>
+        <property name="Agent6">
+            <ref bean="Agent6Bean"></ref>
+        </property>
+        <property name="Agent7">
+            <ref bean="Agent7Bean"></ref>
+        </property>
+        <property name="Agent8">
+            <ref bean="Agent8Bean"></ref>
+        </property>
+        <property name="Agent9">
+            <ref bean="Agent9Bean"></ref>
+        </property>
+        <property name="Agent10">
+            <ref bean="Agent10Bean"></ref>
+        </property>
+    </bean>
+    <bean id="Agent4Bean" class="massim.demoAgents.Agent4Bean" singleton="true">
+        <property name="executionInterval" value="1000" />
+        <property name="logLevel" value="INFO" />
+        <property name="username" value="4"/>
+        <property name="password" value="1"/>
+        <property name="port" value="12300"/>
+        <property name="host" value="localhost"/>
+        <property name="Agent1">
+            <ref bean="Agent1Bean"></ref>
+        </property>
+        <property name="Agent2">
+            <ref bean="Agent2Bean"></ref>
+        </property>
+        <property name="Agent3">
+            <ref bean="Agent3Bean"></ref>
+        </property>
+        <property name="Agent5">
+            <ref bean="Agent5Bean"></ref>
+        </property>
+        <property name="Agent6">
+            <ref bean="Agent6Bean"></ref>
+        </property>
+        <property name="Agent7">
+            <ref bean="Agent7Bean"></ref>
+        </property>
+        <property name="Agent8">
+            <ref bean="Agent8Bean"></ref>
+        </property>
+        <property name="Agent9">
+            <ref bean="Agent9Bean"></ref>
+        </property>
+        <property name="Agent10">
+            <ref bean="Agent10Bean"></ref>
+        </property>
+    </bean>
+    <bean id="Agent5Bean" class="massim.demoAgents.Agent5Bean" singleton="true">
+        <property name="executionInterval" value="1000" />
+        <property name="logLevel" value="INFO" />
+        <property name="username" value="5"/>
+        <property name="password" value="1"/>
+        <property name="port" value="12300"/>
+        <property name="host" value="localhost"/>
+        <property name="Agent1">
+            <ref bean="Agent1Bean"></ref>
+        </property>
+        <property name="Agent2">
+            <ref bean="Agent2Bean"></ref>
+        </property>
+        <property name="Agent3">
+            <ref bean="Agent3Bean"></ref>
+        </property>
+        <property name="Agent4">
+            <ref bean="Agent4Bean"></ref>
+        </property>
+        <property name="Agent6">
+            <ref bean="Agent6Bean"></ref>
+        </property>
+        <property name="Agent7">
+            <ref bean="Agent7Bean"></ref>
+        </property>
+        <property name="Agent8">
+            <ref bean="Agent8Bean"></ref>
+        </property>
+        <property name="Agent9">
+            <ref bean="Agent9Bean"></ref>
+        </property>
+        <property name="Agent10">
+            <ref bean="Agent10Bean"></ref>
+        </property>
+    </bean>
+    <bean id="Agent6Bean" class="massim.demoAgents.Agent6Bean" singleton="true">
+        <property name="executionInterval" value="1000" />
+        <property name="logLevel" value="INFO" />
+        <property name="username" value="6"/>
+        <property name="password" value="1"/>
+        <property name="port" value="12300"/>
+        <property name="host" value="localhost"/>
+        <property name="Agent1">
+            <ref bean="Agent1Bean"></ref>
+        </property>
+        <property name="Agent2">
+            <ref bean="Agent2Bean"></ref>
+        </property>
+        <property name="Agent3">
+            <ref bean="Agent3Bean"></ref>
+        </property>
+        <property name="Agent5">
+            <ref bean="Agent5Bean"></ref>
+        </property>
+        <property name="Agent4">
+            <ref bean="Agent4Bean"></ref>
+        </property>
+        <property name="Agent7">
+            <ref bean="Agent7Bean"></ref>
+        </property>
+        <property name="Agent8">
+            <ref bean="Agent8Bean"></ref>
+        </property>
+        <property name="Agent9">
+            <ref bean="Agent9Bean"></ref>
+        </property>
+        <property name="Agent10">
+            <ref bean="Agent10Bean"></ref>
+        </property>
+    </bean>
+    <bean id="Agent7Bean" class="massim.demoAgents.Agent7Bean" singleton="true">
+        <property name="executionInterval" value="1000" />
+        <property name="logLevel" value="INFO" />
+        <property name="username" value="7"/>
+        <property name="password" value="1"/>
+        <property name="port" value="12300"/>
+        <property name="host" value="localhost"/>
+        <property name="Agent1">
+            <ref bean="Agent1Bean"></ref>
+        </property>
+        <property name="Agent2">
+            <ref bean="Agent2Bean"></ref>
+        </property>
+        <property name="Agent3">
+            <ref bean="Agent3Bean"></ref>
+        </property>
+        <property name="Agent5">
+            <ref bean="Agent5Bean"></ref>
+        </property>
+        <property name="Agent6">
+            <ref bean="Agent6Bean"></ref>
+        </property>
+        <property name="Agent4">
+            <ref bean="Agent4Bean"></ref>
+        </property>
+        <property name="Agent8">
+            <ref bean="Agent8Bean"></ref>
+        </property>
+        <property name="Agent9">
+            <ref bean="Agent9Bean"></ref>
+        </property>
+        <property name="Agent10">
+            <ref bean="Agent10Bean"></ref>
+        </property>
+    </bean>
+    <bean id="Agent8Bean" class="massim.demoAgents.Agent8Bean" singleton="true">
+        <property name="executionInterval" value="1000" />
+        <property name="logLevel" value="INFO" />
+        <property name="username" value="8"/>
+        <property name="password" value="1"/>
+        <property name="port" value="12300"/>
+        <property name="host" value="localhost"/>
+        <property name="Agent1">
+            <ref bean="Agent1Bean"></ref>
+        </property>
+        <property name="Agent2">
+            <ref bean="Agent2Bean"></ref>
+        </property>
+        <property name="Agent3">
+            <ref bean="Agent3Bean"></ref>
+        </property>
+        <property name="Agent5">
+            <ref bean="Agent5Bean"></ref>
+        </property>
+        <property name="Agent6">
+            <ref bean="Agent6Bean"></ref>
+        </property>
+        <property name="Agent7">
+            <ref bean="Agent7Bean"></ref>
+        </property>
+        <property name="Agent4">
+            <ref bean="Agent4Bean"></ref>
+        </property>
+        <property name="Agent9">
+            <ref bean="Agent9Bean"></ref>
+        </property>
+        <property name="Agent10">
+            <ref bean="Agent10Bean"></ref>
+        </property>
+    </bean>
+    <bean id="Agent9Bean" class="massim.demoAgents.Agent9Bean" singleton="true">
+        <property name="executionInterval" value="1000" />
+        <property name="logLevel" value="INFO" />
+        <property name="username" value="9"/>
+        <property name="password" value="1"/>
+        <property name="port" value="12300"/>
+        <property name="host" value="localhost"/>
+        <property name="Agent1">
+            <ref bean="Agent1Bean"></ref>
+        </property>
+        <property name="Agent2">
+            <ref bean="Agent2Bean"></ref>
+        </property>
+        <property name="Agent3">
+            <ref bean="Agent3Bean"></ref>
+        </property>
+        <property name="Agent5">
+            <ref bean="Agent5Bean"></ref>
+        </property>
+        <property name="Agent6">
+            <ref bean="Agent6Bean"></ref>
+        </property>
+        <property name="Agent7">
+            <ref bean="Agent7Bean"></ref>
+        </property>
+        <property name="Agent8">
+            <ref bean="Agent8Bean"></ref>
+        </property>
+        <property name="Agent4">
+            <ref bean="Agent4Bean"></ref>
+        </property>
+        <property name="Agent10">
+            <ref bean="Agent10Bean"></ref>
+        </property>
+
+    </bean>
+    <bean id="Agent10Bean" class="massim.demoAgents.Agent10Bean" singleton="true">
+        <property name="executionInterval" value="1000" />
+        <property name="logLevel" value="INFO" />
+        <property name="username" value="10"/>
+        <property name="password" value="1"/>
+        <property name="port" value="12300"/>
+        <property name="host" value="localhost"/>
+        <property name="Agent1">
+            <ref bean="Agent1Bean"></ref>
+        </property>
+        <property name="Agent2">
+            <ref bean="Agent2Bean"></ref>
+        </property>
+        <property name="Agent3">
+            <ref bean="Agent3Bean"></ref>
+        </property>
+        <property name="Agent5">
+            <ref bean="Agent5Bean"></ref>
+        </property>
+        <property name="Agent6">
+            <ref bean="Agent6Bean"></ref>
+        </property>
+        <property name="Agent7">
+            <ref bean="Agent7Bean"></ref>
+        </property>
+        <property name="Agent8">
+            <ref bean="Agent8Bean"></ref>
+        </property>
+        <property name="Agent9">
+            <ref bean="Agent9Bean"></ref>
+        </property>
+        <property name="Agent4">
+            <ref bean="Agent4Bean"></ref>
+        </property>
+    </bean>
+    <bean id="AbstractAgentBean" class="massim.demoAgents.AbstractAgent" singleton="true" abstract="true">
+        <property name="executionInterval" value="1000" />
+        <property name="logLevel" value="INFO" />
+
+    </bean>
+
+    <bean id="Agent13Bean" class="massim.demoAgents.Agent13Bean" singleton="true">
+        <property name="executionInterval" value="1000" />
+        <property name="logLevel" value="INFO" />
+        <property name="username" value="11"/>
+        <property name="password" value="1"/>
+        <property name="port" value="12300"/>
+        <property name="host" value="localhost"/>
+    </bean>
+    <bean id="Agent14Bean" class="massim.demoAgents.Agent14Bean" singleton="true">
+        <property name="executionInterval" value="1000" />
+        <property name="logLevel" value="INFO" />
+        <property name="username" value="12"/>
+        <property name="password" value="1"/>
+        <property name="port" value="12300"/>
+        <property name="host" value="localhost"/>
+    </bean>
+    <bean id="Agent15Bean" class="massim.demoAgents.Agent15Bean" singleton="true">
+        <property name="executionInterval" value="1000" />
+        <property name="logLevel" value="INFO" />
+        <property name="username" value="13"/>
+        <property name="password" value="1"/>
+        <property name="port" value="12300"/>
+        <property name="host" value="localhost"/>
+    </bean>
+    <bean id="Agent16Bean" class="massim.demoAgents.Agent16Bean" singleton="true">
+        <property name="executionInterval" value="1000" />
+        <property name="logLevel" value="INFO" />
+        <property name="username" value="14"/>
+        <property name="password" value="1"/>
+        <property name="port" value="12300"/>
+        <property name="host" value="localhost"/>
+    </bean>
+    <bean id="Agent17Bean" class="massim.demoAgents.Agent17Bean" singleton="true">
+        <property name="executionInterval" value="1000" />
+        <property name="logLevel" value="INFO" />
+        <property name="username" value="15"/>
+        <property name="password" value="1"/>
+        <property name="port" value="12300"/>
+        <property name="host" value="localhost"/>
+    </bean>
+    <bean id="Agent18Bean" class="massim.demoAgents.Agent18Bean" singleton="true">
+        <property name="executionInterval" value="1000" />
+        <property name="logLevel" value="INFO" />
+        <property name="username" value="16"/>
+        <property name="password" value="1"/>
+        <property name="port" value="12300"/>
+        <property name="host" value="localhost"/>
+    </bean>
+    <bean id="Agent19Bean" class="massim.demoAgents.Agent19Bean" singleton="true">
+        <property name="executionInterval" value="1000" />
+        <property name="logLevel" value="INFO" />
+        <property name="username" value="17"/>
+        <property name="password" value="1"/>
+        <property name="port" value="12300"/>
+        <property name="host" value="localhost"/>
+    </bean>
+    <bean id="Agent20Bean" class="massim.demoAgents.Agent20Bean" singleton="true">
+    <property name="executionInterval" value="1000" />
+    <property name="logLevel" value="INFO" />
+    <property name="username" value="18"/>
+    <property name="password" value="1"/>
+    <property name="port" value="12300"/>
+    <property name="host" value="localhost"/>
+</bean>
+    <bean id="Agent21Bean" class="massim.demoAgents.Agent21Bean" singleton="true">
+        <property name="executionInterval" value="1000" />
+        <property name="logLevel" value="INFO" />
+        <property name="username" value="19"/>
+        <property name="password" value="1"/>
+        <property name="port" value="12300"/>
+        <property name="host" value="localhost"/>
+    </bean>
+    <bean id="Agent22Bean" class="massim.demoAgents.Agent22Bean" singleton="true">
+        <property name="executionInterval" value="1000" />
+        <property name="logLevel" value="INFO" />
+        <property name="username" value="20"/>
+        <property name="password" value="1"/>
+        <property name="port" value="12300"/>
+        <property name="host" value="localhost"/>
+    </bean>
+
+</beans>
